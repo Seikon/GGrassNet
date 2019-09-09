@@ -27,7 +27,7 @@ Dicho dataset contiene más 500 imagenes de césped, las cuales han sido tratada
 Finalmente sumando todas estas máscaras obtenemos la imagen que codifica la información de entrada:
 ### Resultado suma de todas las matrices (256, 256) (G = V + A + VA + M):
 
-![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/5.JPG)
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/7.JPG)
 
 ## Entrenamiento
 El módelo se ha entrenado durante 150 épocas. Se ha observado que para 20 o 30 épocas el modelo ya convergía, pero generaba pequeños artefactos que, siendo poco perceptibles, a veces se convertian en atleatorios:
