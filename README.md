@@ -40,6 +40,8 @@ El módelo ha sido entrenado con una targeta gráfica nvidia gtx 1060 3GB, lo qu
     BATCH_SIZE = 1
     IMG_WIDTH = 256
     IMG_HEIGHT = 256
+    
+Se ha ejecutado también data augmentation con el fin de aumentar el set de datos. Las tecnicas empleadas han sido flip y random cropping.
 
 Además se ha conservado el factor lambda de regularización por defecto que recomiendan los autores originales del modelo Pix2Pix a 100.
 
