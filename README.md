@@ -54,8 +54,8 @@ A continuación se muestra una serie de test generados tras el entrenamiento de 
 
 ####Instala las librerias necesarias:
 
-    pip install tensorflow-gpu====2.0.0-rc0 (o la versión cpu en caso de no disponer de gpu)
-    pip install numpy
+    pip install tensorflow-gpu==2.0.0-rc0 (o la versión cpu en caso de no disponer de gpu)
+    pip install numpy==1.17.2
     pip install opencv
     pip install IPython
     pip install future
