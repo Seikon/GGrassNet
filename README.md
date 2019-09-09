@@ -17,18 +17,17 @@ El dataset de entrenamiento ha sido extradio de la plataforma de aprendizaje de 
 https://www.kaggle.com/archfx/paddygrass-distinguisher
 
 Dicho dataset contiene más 500 imagenes de césped, las cuales han sido tratadas con funciones de numpy y opencv. Dicho tratamiento consiste en aplicar una serie de máscaras de color personalizadas a la imagen, de tal forma que podemos codificar cada pixel de cada brizna de césped con su color correspondiente: (bitwise_and() para los amigos). Para facilitar la aplicación de máscaras de color, se ha echo una transformación previa del canal de color RBG al canal HSV, donde H representa la gama de colores en 360 slots diferentes. Como las imagenes constan de matrices de 8 bits, se aplicado un factor de conversión para transformar estos 360 slots a 255 posibles valores:
+
 ### Imagen original
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/4.JPG)
 
-### Máscara de color verde
-
-### Máscara de color amarillo
-
-### Máscara de color naranja y marrón
-
-### Máscara de color verdes claros
+### Máscaras de colores (verde (V), amarillo (A), verdes_claros (VA), marrones (M))
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/3.JPG)
 
 Finalmente sumando todas estas máscaras obtenemos la imagen que codifica la información de entrada:
-### Resultado suma de todas las matrices (256, 256):
+### Resultado suma de todas las matrices (256, 256) (G = V + A + VA + M):
+
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/5.JPG)
 
 ## Entrenamiento
 El módelo se ha entrenado durante 150 épocas. Se ha observado que para 20 o 30 épocas el modelo ya convergía, pero generaba pequeños artefactos que, siendo poco perceptibles, a veces se convertian en atleatorios:
