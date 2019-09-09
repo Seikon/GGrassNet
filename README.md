@@ -44,7 +44,7 @@ IMG_HEIGHT = 256
 
 Además se ha conservado el factor lambda de regularización por defecto que recomiendan los autores originales del modelo Pix2Pix a 100.
 
-## Test y... pruebelo usted mismo!
+## Test y... pruébelo usted mismo!
 
 ## Agradecimientos
 A Carlos Santana Vega (https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg) por sus incasable labor de divulgación científica que llega desde ingenieros hasta estudiantes de secundaria que dan sus primeros pasos en deep learning.
@@ -55,9 +55,4 @@ A Victor Valderrama Arroyo (https://www.deviantart.com/victorvicius) por su apoy
 
 Al usuario Aruna Jayasena (https://www.kaggle.com/archfx) por su aportación de manera pública al dataset del cual se ha nutrido este proyecto
 
-A ti, lector interesado en la IA y en el machine learning por tu tiempo de lectura.
-
-
-
-
-
+A ti, lector interesado en la IA y en el machine learning por tu tiempo de lectura :)
