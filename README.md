@@ -46,6 +46,45 @@ Además se ha conservado el factor lambda de regularización por defecto que rec
 
 ## Test y... pruébelo usted mismo!
 
+A continuación se muestra una serie de test generados tras el entrenamiento de 150 épocas:
+
+
+####Para una prueba interactiva, descarga este repositorio:
+
+git clone https://github.com/Seikon/GGrassNet.git
+
+####Instala las librerias necesarias:
+
+pip install tensorflow-gpu====2.0.0-rc0 (o la versión cpu en caso de no disponer de gpu)
+pip install numpy
+pip install opencv
+pip install IPython
+pip install future
+
+####Entrenamiento desde 0
+
+Primeramente ejecuta en la consola de comandos el archivo que genera el dataset:
+
+  python generate_dataset.py
+
+Luego entrena el modelo durante las épocas que elijas: (dentro del código, en la linea 281, modifica la variable EPOCHS, para modificar el número de épocas de entrenamiento):
+
+  python Pix2Pix.py
+
+*Este proceso tardará mas o menos dependiendo de la GPU / CPU que tengas
+
+Una vez entrenado el modelo, inserta en la carpeta "interact" las images que quieras para testear el modelo con sus propias imágenes. He incluido unas de ejemplo sacadas directamente de google.
+
+Con el siguiente comando, el modelo recorrerá y ejecutará un fast forward a través de tus imagenes:
+
+  python interactive_test.py
+
+####Usando modelo pre-entenado
+
+Con el siguiente comando, el modelo recorrerá y ejecutará un fast forward a través de tus imagenes usando el modelo preentrenado de la carpeta models:
+
+  python interactive_test.py
+
 ## Agradecimientos
 A Carlos Santana Vega (https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg) por sus incasable labor de divulgación científica que llega desde ingenieros hasta estudiantes de secundaria que dan sus primeros pasos en deep learning.
 
