@@ -31,10 +31,33 @@ Finalmente sumando todas estas máscaras obtenemos la imagen que codifica la inf
 ### Resultado suma de todas las matrices (256, 256):
 
 ## Entrenamiento
-
 El módelo se ha entrenado durante 150 épocas. Se ha observado que para 20 o 30 épocas el modelo ya convergía, pero generaba pequeños artefactos que, siendo poco perceptibles, a veces se convertian en atleatorios:
 
-![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/5.jpg)
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/5.JPG)
+
+El módelo ha sido entrenado con una targeta gráfica nvidia gtx 1060 3GB, lo que a limitado en parte el proceso y a obligado a reducir parametros del entrenamiento como el batch size. A continuación se muestran los parámetros utilizados para el entrenamiento:
+
+BUFFER_SIZE = 400
+BATCH_SIZE = 1
+IMG_WIDTH = 256
+IMG_HEIGHT = 256
+
+Además se ha conservado el factor lambda de regularización por defecto que recomiendan los autores originales del modelo Pix2Pix a 100.
+
+## Test y... pruebelo usted mismo!
+
+## Agradecimientos
+A Carlos Santana Vega (https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg) por sus incasable labor de divulgación científica que llega desde ingenieros hasta estudiantes de secundaria que dan sus primeros pasos en deep learning.
+
+A Phillip Isola Jun-Yan Zhu Tinghui Zhou Alexei A. Efros, autores originales de Pix2Pix por hacer público un conocimiento que en el futuro cercano estará muy presente.
+
+A Victor Valderrama Arroyo (https://www.deviantart.com/victorvicius) por su apoyo al proyecto, su aportación de ideas y generación de datasets de manera totalmente desinteresada. Ah... y por aportar su hardware rtx 2050 8GB para hacer pruebas de concepto rápidas que a mi me costaban la vida.
+
+Al usuario Aruna Jayasena (https://www.kaggle.com/archfx) por su aportación de manera pública al dataset del cual se ha nutrido este proyecto
+
+A ti, lector interesado en la IA y en el machine learning por tu tiempo de lectura.
+
+
 
 
 
