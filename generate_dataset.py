@@ -60,6 +60,9 @@ if not os.path.exists("./dataset/test"):
 if not os.path.exists("./dataset/merge"):
     os.makedirs("./dataset/merge")
 
+if not os.path.exists("./models"):
+    os.makedirs("./models")
+
 input_folder = "./dataset/input/"
 
 green_bk = cv2.merge([np.zeros((256,256,1), dtype=np.uint8), 
