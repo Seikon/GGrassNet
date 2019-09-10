@@ -60,6 +60,7 @@ A continuación se muestra una serie de test generados tras el entrenamiento de 
 
     pip install tensorflow-gpu==2.0.0-rc0 (o la versión cpu en caso de no disponer de gpu)
     pip install numpy==1.17.2
+    pip install matplotlib
     pip install opencv-python
     pip install IPython
     pip install future
