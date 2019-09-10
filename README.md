@@ -1,5 +1,5 @@
 # GGrassNet
-Generated Realistic grass imaged based on plain color 
+Generación de imagenes realistas de céspedes basado en colores planos
 
 
 ## Introducción
