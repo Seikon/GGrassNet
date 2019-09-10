@@ -52,11 +52,11 @@ A continuación se muestra una serie de test generados tras el entrenamiento de 
 ![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/9.JPG)
 ![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/10.JPG)
 
-####Para una prueba interactiva, descarga este repositorio:
+#### Para una prueba interactiva, descarga este repositorio:
 
     git clone https://github.com/Seikon/GGrassNet.git
 
-####Instala las librerias necesarias:
+#### Instala las librerias necesarias:
 
     pip install tensorflow-gpu==2.0.0-rc0 (o la versión cpu en caso de no disponer de gpu)
     pip install numpy==1.17.2
@@ -64,7 +64,7 @@ A continuación se muestra una serie de test generados tras el entrenamiento de 
     pip install IPython
     pip install future
 
-####Entrenamiento desde 0
+#### Entrenamiento desde 0
 
 Primeramente ejecuta en la consola de comandos el archivo que genera el dataset:
 
@@ -82,7 +82,7 @@ Con el siguiente comando, el modelo recorrerá y ejecutará un fast forward a tr
 
     python interactive_test.py
 
-####Usando modelo pre-entenado
+#### Usando modelo pre-entenado
 
 Con el siguiente comando, el modelo recorrerá y ejecutará un fast forward a través de tus imagenes usando el modelo preentrenado de la carpeta models:
 
