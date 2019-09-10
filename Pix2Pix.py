@@ -1,6 +1,7 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 import tensorflow as tf
 import os
+import random
 import time
 import matplotlib.pyplot as plt
 from IPython.display import clear_output
@@ -65,7 +66,7 @@ def random_jitter(input_image, real_image):
   # randomly cropping to 256 x 256 x 3
   input_image, real_image = random_crop(input_image, real_image)
 
-  if tf.random.uniform(()) > 0.5:
+  if random.randint(1,3) > 1:
     # random mirroring
     input_image = tf.image.flip_left_right(input_image)
     real_image = tf.image.flip_left_right(real_image)
@@ -278,7 +279,7 @@ checkpoint = tf.train.Checkpoint(generator_optimizer=generator_optimizer,
                                  generator=generator,
                                  discriminator=discriminator)
 
-EPOCHS = 150
+EPOCHS = 100
 
 def generate_images(model, test_input, tar):
   # the training=True is intentional here since
