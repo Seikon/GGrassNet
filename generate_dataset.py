@@ -1,7 +1,7 @@
 import cv2 as cv2
 import numpy as np
 from random import shuffle
-from os import listdir
+from os import listdir, makedirs, path
 from shutil import copyfile
 
 def suffle(train_output_folder, cross_output_folder, test_output_folder, src_folder):
@@ -48,20 +48,20 @@ def suffle(train_output_folder, cross_output_folder, test_output_folder, src_fol
 
 print("Creating directories...")
 
-if not os.path.exists("./dataset/train"):
-    os.makedirs("./dataset/train")
+if not path.exists("./dataset/train"):
+    makedirs("./dataset/train")
 
-if not os.path.exists("./dataset/val"):
-    os.makedirs("./dataset/val")
+if not path.exists("./dataset/val"):
+    makedirs("./dataset/val")
 
-if not os.path.exists("./dataset/test"):
-    os.makedirs("./dataset/test")
+if not path.exists("./dataset/test"):
+    makedirs("./dataset/test")
 
-if not os.path.exists("./dataset/merge"):
-    os.makedirs("./dataset/merge")
+if not path.exists("./dataset/merge"):
+    makedirs("./dataset/merge")
 
-if not os.path.exists("./models"):
-    os.makedirs("./models")
+if not path.exists("./models"):
+    makedirs("./models")
 
 input_folder = "./dataset/input/"
 
@@ -108,14 +108,9 @@ for f in listdir(input_folder):
     image_yellow = cv2.bitwise_and(yellow_bk, yellow_bk,mask=yellow)
     image_shine_green = cv2.bitwise_and(shine_green_bk, shine_green_bk,mask=shine_green)
 
-
     generated = cv2.add(image_green, image_brown)
     generated = cv2.add(generated, image_yellow)
     generated = cv2.add(generated, image_shine_green)
-    generated = cv2.add(generated, image_shine_green)
-
-    generated = (generated / 127.5) - 1
-    image = (image / 127.5) - 1
 
     sample = np.concatenate((image, generated),axis=1)
 
