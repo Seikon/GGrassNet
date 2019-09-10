@@ -278,7 +278,7 @@ checkpoint = tf.train.Checkpoint(generator_optimizer=generator_optimizer,
                                  generator=generator,
                                  discriminator=discriminator)
 
-EPOCHS = 1
+EPOCHS = 150
 
 def generate_images(model, test_input, tar):
   # the training=True is intentional here since
