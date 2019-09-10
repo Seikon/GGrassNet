@@ -66,6 +66,9 @@ A continuación se muestra una serie de test generados tras el entrenamiento de 
 
 #### Entrenamiento desde 0
 
+Para descargar el dataset completo puedes usar este enlace (y descomprimelo en la carpeta raiz del proyecto):
+            https://drive.google.com/file/d/1jp8lC0aa_YPDRkfx2-e5vFiPgCaR-gnA/view
+
 Primeramente ejecuta en la consola de comandos el archivo que genera el dataset:
 
     python generate_dataset.py
@@ -82,7 +85,10 @@ Con el siguiente comando, el modelo recorrerá y ejecutará un fast forward a tr
 
     python interactive_test.py
 
-#### Usando modelo pre-entenado
+#### Usando modelo pre-entrenado
+
+Para descargar el modelo pre-entrenado puedes usar este enlace (y descomprimelo en la carpeta raiz del proyecto):
+            https://drive.google.com/file/d/1D-bBZ-3emM5M-ERX2CbmComN6QZhjDxP/view?usp=sharing
 
 Con el siguiente comando, el modelo recorrerá y ejecutará un fast forward a través de tus imagenes usando el modelo preentrenado de la carpeta models:
 
