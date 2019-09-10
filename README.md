@@ -48,7 +48,9 @@ Además se ha conservado el factor lambda de regularización por defecto que rec
 ## Test y... pruébelo usted mismo!
 
 A continuación se muestra una serie de test generados tras el entrenamiento de 150 épocas:
-
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/8.JPG)
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/9.JPG)
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/10.JPG)
 
 ####Para una prueba interactiva, descarga este repositorio:
 
