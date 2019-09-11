@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import random
 
-def generateImageRPS(width, height):
+def generateImageRPN(width, height):
 
     tar = np.zeros((width, height, 3), dtype=np.uint8)
 
@@ -59,7 +59,7 @@ masked = cv2.bitwise_and(RPSNoise, RPSNoise, mask=contoured)
 
 cv2.imshow("masked", masked)
 
-cv2.imwrite("imageRPS", masked)
+cv2.imwrite("imageRPN.jpg", masked)
 
 cv2.waitKey(0)
 
