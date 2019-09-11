@@ -105,3 +105,5 @@ A Victor Valderrama Arroyo (https://www.deviantart.com/victorvicius) por su apoy
 Al usuario Aruna Jayasena (https://www.kaggle.com/archfx) por su aportación de manera pública al dataset del cual se ha nutrido este proyecto
 
 A ti, lector interesado en la IA y en el machine learning por tu tiempo de lectura :)
+
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/11.JPG)
