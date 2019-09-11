@@ -40,7 +40,7 @@ Las regiones de interes deben ser llenadas con los colores seleccionados con los
 ### 3. Fusión de imagen RPN + ROI (Random ponderated noise)
 A continuación llenamos nuestras ROIS con la máscara RPN generada anteriormente y obtenemos la imagen de ROIS llena completamente con los colores planos que GGrassNet entenderá:
 
-![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/15.jpg)
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/15.JPG)
 
 ### 4. FastForward através de GrassNet:
 Finalmente, pasamos la imagen a través de la red obteniendo los siguientes resultados:
@@ -49,7 +49,7 @@ Finalmente, pasamos la imagen a través de la red obteniendo los siguientes resu
 
 Y así conseguimos generar una imagen restaurada con césped a tarevés de dicha imagen de un suelo desertificado:
 
-![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/17.JPG)
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/17.jpg)
 
 ## Dataset
 El dataset de entrenamiento ha sido extradio de la plataforma de aprendizaje de deep learning kaggle:
