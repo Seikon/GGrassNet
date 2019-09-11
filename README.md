@@ -14,7 +14,7 @@ Para ello, se ha recurrido al modelo de deep learning Pix2Pix: (https://arxiv.or
 ## Caso Práctico. Regenerar un terreno desertizado a través de GGrassNet
 Imaginemos que partimos de la imagen de un terreno desertizado como el de la siguiente imagen:
 
-![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/12.JPG)
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/12.jpg)
 
 Através de GGrassNet es posible generar una imagen del mismo terreno regenerado con césped.
 
@@ -25,17 +25,31 @@ Para ello se describe el siguiente procedimiento:
 ### 1. Extracción de características
 Una forma de extraer información de la imagen es a través de sus bordes o de contornos:
 
-![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/13.JPG)
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/13.jpg)
 
 ### 2. Generación de ROIS (Regions of interest)
 Como lo que nos interesa modificar de la imagen no son los bordes, sino las regiones que contiene dentro de ellos, hemos de resaltar dichas regiones invirtiendo el color de la imagen (operación NOT sobre matrices):
 
-![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/14.JPG)
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/14.jpg)
 
 ### 2. Generación de RPN (Random ponderated noise)
-Las regiones de interes deben ser llenadas con los colores seleccionados con los que entrenamos a GGrassNet, por ello hemos de llenar dichas regiones de alguna manera. Como los pixeles de las imagenes de césped no son completamente atleatorias (el verde por ejemplo está mas presente que otros colores), el ruido atleatorio que hemos de generar dentro de las ROIS debe ser ponderado, es decir, que ciertos colores aparezcan con mas frecuencia que otros:
+Las regiones de interes deben ser llenadas con los colores seleccionados con los que entrenamos a GGrassNet, por ello hemos de llenar dichas regiones de alguna manera. Como los pixeles de las imagenes de césped no son completamente atleatorias (el verde por ejemplo está mas presente que otros colores), el ruido atleatorio que hemos de generar dentro de las ROIS debe ser ponderado, es decir, que ciertos colores aparezcan con mas frecuencia que otros. A continuación se puede ver una imagen del algoritmo en proceso de generación:
 
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/gifRPN.gif)
 
+### 3. Fusión de imagen RPN + ROI (Random ponderated noise)
+A continuación llenamos nuestras ROIS con la máscara RPN generada anteriormente y obtenemos la imagen de ROIS llena completamente con los colores planos que GGrassNet entenderá:
+
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/15.jpg)
+
+### 4. FastForward através de GrassNet:
+Finalmente, pasamos la imagen a través de la red obteniendo los siguientes resultados:
+
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/16.jpg)
+
+Y así conseguimos generar una imagen restaurada con césped a tarevés de dicha imagen de un suelo desertificado:
+
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/17.JPG)
 
 ## Dataset
 El dataset de entrenamiento ha sido extradio de la plataforma de aprendizaje de deep learning kaggle:
