@@ -49,7 +49,7 @@ Finalmente, pasamos la imagen a través de la red obteniendo los siguientes resu
 
 Y así conseguimos generar una imagen restaurada con césped a tarevés de dicha imagen de un suelo desertificado:
 
-![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/17.jpg)
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/17.JPG)
 
 ## Dataset
 El dataset de entrenamiento ha sido extradio de la plataforma de aprendizaje de deep learning kaggle:
