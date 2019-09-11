@@ -11,6 +11,32 @@ Para ello, se ha recurrido al modelo de deep learning Pix2Pix: (https://arxiv.or
 
 ![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/2.png)
 
+## Caso Práctico. Regenerar un terreno desertizado a través de GGrassNet
+Imaginemos que partimos de la imagen de un terreno desertizado como el de la siguiente imagen:
+
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/12.JPG)
+
+Através de GGrassNet es posible generar una imagen del mismo terreno regenerado con césped.
+
+Como queremos generar una imagen del terreno pero cubierto de césped, hemos de alguna forma transformar la imagen de entrada a una que nuestro modelo pueda entender. No vale cualquier imagen de colores verdes, marrones o amarrillos, ya que no estariamos respetando la estructura de la imagen original y por tanto debemos de alguna forma preservar la estructura básica de la red.
+
+Para ello se describe el siguiente procedimiento:
+
+### 1. Extracción de características
+Una forma de extraer información de la imagen es a través de sus bordes o de contornos:
+
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/13.JPG)
+
+### 2. Generación de ROIS (Regions of interest)
+Como lo que nos interesa modificar de la imagen no son los bordes, sino las regiones que contiene dentro de ellos, hemos de resaltar dichas regiones invirtiendo el color de la imagen (operación NOT sobre matrices):
+
+![alt text](https://raw.githubusercontent.com/Seikon/GGrassNet/master/docu/14.JPG)
+
+### 2. Generación de RPN (Random ponderated noise)
+Las regiones de interes deben ser llenadas con los colores seleccionados con los que entrenamos a GGrassNet, por ello hemos de llenar dichas regiones de alguna manera. Como los pixeles de las imagenes de césped no son completamente atleatorias (el verde por ejemplo está mas presente que otros colores), el ruido atleatorio que hemos de generar dentro de las ROIS debe ser ponderado, es decir, que ciertos colores aparezcan con mas frecuencia que otros:
+
+
+
 ## Dataset
 El dataset de entrenamiento ha sido extradio de la plataforma de aprendizaje de deep learning kaggle:
 
